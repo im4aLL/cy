@@ -1,0 +1,128 @@
+/*
+* CodeYah
+* site.css
+* 04.06.2013
+*
+* ===========================================
+* @package		1.0
+* @author 		Habib Hadi <me@habibhadi.com>
+* @copyright	Codeyah
+* @version    	Release: 1.0 beta
+* ===========================================
+*/
+
+/* #Global
+================================================== */
+body { font-family: 'Droid', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; height:2000px }
+.container { max-width:960px; width:auto !important; width:960px; margin:0 auto }
+
+/* #Extended pure
+================================================== */
+html, button, input, select, textarea { font-family: 'Droid', Helvetica, Arial, sans-serif; }
+.pure-button { font-family: 'Bebas', Helvetica, Arial, sans-serif; font-weight:normal }
+.pure-button-xlarge { font-size:120% }
+.pure-button-xxlarge { font-size:150% }
+
+.pure-button-success, .pure-button-error, .pure-button-warning, .pure-button-secondary, .pure-button-dark { color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+.pure-button-success { background: rgb(76, 201, 71); }
+.pure-button-error { background: rgb(202, 60, 60); }
+.pure-button-warning { background: orange; }
+.pure-button-secondary { background: rgb(95, 198, 218); }
+.pure-button-dark {
+background: rgba(66,36,23,1);
+background: -moz-linear-gradient(top, rgba(66,36,23,1) 0%, rgba(41,22,13,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(66,36,23,1)), color-stop(100%, rgba(41,22,13,1)));
+background: -webkit-linear-gradient(top, rgba(66,36,23,1) 0%, rgba(41,22,13,1) 100%);
+background: -o-linear-gradient(top, rgba(66,36,23,1) 0%, rgba(41,22,13,1) 100%);
+background: -ms-linear-gradient(top, rgba(66,36,23,1) 0%, rgba(41,22,13,1) 100%);
+background: linear-gradient(to bottom, rgba(66,36,23,1) 0%, rgba(41,22,13,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#422417', endColorstr='#29160d', GradientType=0 ); color:#ad6421; border-bottom:1px solid #1f110a; }
+.pure-button-dark:hover { background: rgba(66,36,23,1); -webkit-box-shadow: inset 0px 0px 27px 0px rgba(0,0,0,0.53);
+-moz-box-shadow: inset 0px 0px 27px 0px rgba(0,0,0,0.53);
+box-shadow: inset 0px 0px 27px 0px rgba(0,0,0,0.53); }
+
+/* #Common
+================================================== */
+h1,h2,h3,h4,h5 { font-family: 'Bebas', Helvetica, Arial, sans-serif; font-weight:normal }
+
+::-moz-selection {
+    background-color: #ad6421;
+    color: #fff;
+	text-shadow:none;
+}
+
+::selection {
+    background-color: #ad6421;
+    color: #fff;
+	text-shadow:none;
+}
+
+.bc-blue { background-color:#0e90d2 }
+.bc-purple { background-color:#8058a5 }
+.bc-green { background-color:#5eb95e }
+.bc-red { background-color:#dd514c }
+.bc-orange { background-color:#f37b1d }
+.bc-yellow { background-color:#fad232 }
+
+a {
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;	
+}
+
+/* #Top
+================================================== */
+#top div { height:5px; }
+
+/* #Header
+================================================== */
+header { font-size:85%; }
+header h1 a { color:#1f8dd6; text-decoration:none; font-family: 'Droid', Helvetica, Arial, sans-serif;  }
+header nav { margin-top:17px; }
+header nav ul { float:right; text-transform:capitalize }
+
+.banner-wrapper { background:url(../images/banner-1.jpg) no-repeat 50% 0% fixed #F6F6F6; text-align:center; height:500px; position:relative; overflow:hidden }
+.banner-wrapper .hero-text { color:#FFF; position:absolute; bottom:10%; width:700px; left:50%; margin-left:-350px;  }
+.banner-wrapper .hero-text h2 { font-size:36px; margin:0px }
+
+/* #Search
+================================================== */
+.search { margin:20px auto; }
+.search #src-input { padding:10px; float:right; width:80%; font-size:100%;
+border-radius: 2px 2px 2px 2px;
+-moz-border-radius: 2px 2px 2px 2px;
+-webkit-border-radius: 2px 2px 2px 2px; }
+.search button { margin-left:10px }
+
+/* #Media Queries
+================================================== */
+ 
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+	header h1 a { margin-left:10px; display:inline-block }
+	header nav ul { float:none }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+	.hide-tablet { display:none }
+	.search { padding:0px 20px }
+	.search #src-input { float:none; width:100%; margin-bottom:10px; box-sizing:border-box; }
+	.search button { width:100%; margin-left:0px }
+}
+
+@media only screen and (max-width: 699px) {
+	.banner-wrapper { height:300px }
+	.banner-wrapper .hero-text { width:200px;  margin-left:-100px; }
+	.banner-wrapper .hero-text .pure-button-xxlarge { font-size:100% }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {}
